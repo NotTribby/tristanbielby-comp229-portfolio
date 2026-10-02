@@ -1,8 +1,18 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Home() {
+  const location = useLocation();
+  const submittedForm = location.state?.submittedForm;
+
   return (
     <main className="home">
+      {submittedForm && (
+        <div className="thank-you">
+          Thanks, {submittedForm.firstName}! Your message was received. I'll
+          reply to {submittedForm.email} soon.
+        </div>
+      )}
+
       <section className="home-hero">
         <h1>Hi, I'm Tristan Bielby</h1>
         <p className="home-tagline">
