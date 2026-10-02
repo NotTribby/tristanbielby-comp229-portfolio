@@ -2,6 +2,7 @@
 
 Personal portfolio website built with React for COMP229.
 
+**Live site:** https://tristanbielby-comp229-portfolio.vercel.app/
 
 ## Built With
 
